@@ -23,9 +23,6 @@ export default Ember.Route.extend({
       });
       post.save();
       this.transitionTo('index');
-    },
-    toggleSidebar(){
-      $('#sidebar').sidebar('toggle');
     }
   }
 });

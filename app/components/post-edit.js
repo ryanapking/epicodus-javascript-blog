@@ -3,6 +3,9 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   inEdit: false,
   actions:{
+    deletePost(post){
+      this.sendAction("deletePost", post);
+    },
     goEdit(){
       this.set("inEdit", true);
     },

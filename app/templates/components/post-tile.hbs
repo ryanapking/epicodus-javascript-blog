@@ -1,3 +1,9 @@
-{{post.title}}<br>
-{{post.content}}<br>
-{{post.dateCreated}}{{post-edit post=post editPost="editPost"}}<button {{action "deletePost" post}}>X</button><hr>
+
+  <div class="title">
+    {{post.title}}
+  </div>
+  <div class="content">
+    {{post.content}}<br>
+    {{post.dateCreated}}
+    {{post-edit post=post editPost="editPost" deletePost="deletePost"}}
+  </div>

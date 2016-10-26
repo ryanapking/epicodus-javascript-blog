@@ -3,6 +3,13 @@
   {{input value=post.content}}
   {{input type="date" value=dateCreated}}
   <button {{action "editPost" post}}>Save</button>
+  <div class="circular ui button green mini" {{action 'editPost' post}}>{{fa-icon "check"}}</div>
 {{else}}
-  <button {{action "goEdit"}}>Edit</button>
+  <!-- <span class="circular ui button yellow mini" {{action 'goEdit'}}>{{fa-icon "pencil"}}</span>
+  <div class="circular ui button red mini" {{action 'deletePost' post}}>{{fa-icon "trash"}}</div> -->
+  <div class="ui buttons">
+    <button class="circular ui button yellow mini" {{action 'goEdit'}}>{{fa-icon "pencil"}}</button>
+    <div class="mini or"></div>
+    <button class="circular ui button red mini" {{action 'deletePost' post}}>{{fa-icon "trash"}}</button>
+  </div>
 {{/if}}
