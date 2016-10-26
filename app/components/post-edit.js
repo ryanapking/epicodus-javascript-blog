@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   inEdit: false,
   actions:{
     goEdit(){
-      this.set("inEdit", true)
+      this.set("inEdit", true);
     },
     editPost(post){
       var params = {
