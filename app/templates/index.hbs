@@ -1,1 +1,5 @@
+{{#each model as |post|}}
+  {{post-tile post=post deletePost="deletePost"}}
+{{/each}}
+{{post-new newPost="newPost"}}
 {{outlet}}

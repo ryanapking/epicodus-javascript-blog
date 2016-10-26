@@ -1,0 +1,11 @@
+{{#if inNew}}
+  <label>Title:</label>
+  {{input value=title}}
+  <label>Content:</label>
+  {{input value=content}}
+  <label>Date Created:</label>
+  {{input value=dateCreated}}
+  <button {{action 'newPost'}}>Submit Post</button>
+{{else}}
+  <button {{action "goNew"}}>Create New Post</button>
+{{/if}}

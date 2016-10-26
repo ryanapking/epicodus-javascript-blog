@@ -1,14 +1,14 @@
-{ "rentals": [{
-    "title": "Veruca Salt",
-    "content": "San Francisco",
-    "dateCreated": "Estate",
+{ "posts": [{
+    "title": "Hello Internet",
+    "content": "Nice to meet you! My name is Janice, and I look forward to the cats!",
+    "dateCreated": "2016-10-1"
   }, {
-    "title": "Mike Teavee",
-    "content": "Seattle",
-    "dateCreated": "Condo",
+    "title": "Why so angry?",
+    "content": "Internet I don't understand why you leave all these hateful comments!",
+    "dateCreated": "2016-10-2"
   }, {
-    "title": "Violet Beauregarde",
-    "content": "Portland",
-    "dateCreated": "Apartment",
+    "title": "Harambe",
+    "content": "Terrorist gorillas are the true problem this nation faces, and I support our truoops in saving the lives of small children.",
+    "dateCreated": "2016-10-3"
   }]
 }
