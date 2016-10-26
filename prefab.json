@@ -1,0 +1,14 @@
+{ "rentals": [{
+    "title": "Veruca Salt",
+    "content": "San Francisco",
+    "dateCreated": "Estate",
+  }, {
+    "title": "Mike Teavee",
+    "content": "Seattle",
+    "dateCreated": "Condo",
+  }, {
+    "title": "Violet Beauregarde",
+    "content": "Portland",
+    "dateCreated": "Apartment",
+  }]
+}
