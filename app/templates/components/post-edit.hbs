@@ -1,1 +1,8 @@
-{{yield}}
+{{#if inEdit}}
+  {{input value=post.title}}
+  {{input value=post.content}}
+  {{input type="date" value=dateCreated}}
+  <button {{action "editPost" post}}>Save</button>
+{{else}}
+  <button {{action "goEdit"}}>Edit</button>
+{{/if}}

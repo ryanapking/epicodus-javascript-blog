@@ -4,7 +4,7 @@
   <label>Content:</label>
   {{input value=content}}
   <label>Date Created:</label>
-  {{input value=dateCreated}}
+  {{input type="date" value=dateCreated}}
   <button {{action 'newPost'}}>Submit Post</button>
 {{else}}
   <button {{action "goNew"}}>Create New Post</button>
