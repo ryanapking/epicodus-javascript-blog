@@ -1,0 +1,11 @@
+{{#if inNew}}
+  <label>Name:</label>
+  {{input value=userName}}
+  <label>Comment:</label>
+  {{input value=content}}
+  <label>Date Created:</label>
+  {{input type="date" value=dateCreated}}
+  <button {{action 'newComment' post}}>Submit Comment</button>
+{{else}}
+  <button {{action "goNew"}}>Comment</button>
+{{/if}}

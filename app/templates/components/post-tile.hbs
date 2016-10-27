@@ -1,9 +1,12 @@
-
-  <div class="title">
-    {{post.title}}
-  </div>
-  <div class="content">
-    {{post.content}}<br>
-    {{post.dateCreated}}
-    {{post-edit post=post editPost="editPost" deletePost="deletePost"}}
-  </div>
+{{#if inPost}}
+  {{post.title}}<br>
+  {{post.content}}<br>
+  {{post.dateCreated}}
+  {{post-edit post=post editPost="editPost" deletePost="deletePost"}}
+  {{#each post.comments as |comment|}}
+    {{comment-tile comment=comment deleteComment="deleteComment"}}
+  {{/each}}
+  {{comment-new post=post newComment="newComment"}}
+{{else}}
+  {{#link-to 'post' post.id}}{{post.title}}{{/link-to}}
+{{/if}}
