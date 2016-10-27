@@ -5,7 +5,7 @@
   {{input value=content}}
   <label>Date Created:</label>
   {{input type="date" value=dateCreated}}
-  <button {{action 'newComment' post}}>Submit Comment</button>
+  <div class="circular ui button green mini" {{action 'newComment' post}}>{{fa-icon "check"}}</div>
 {{else}}
-  <button {{action "goNew"}}>Comment</button>
+  <div class="circular ui button blue mini" {{action 'goNew'}}>{{fa-icon "comment-o"}}</div>
 {{/if}}

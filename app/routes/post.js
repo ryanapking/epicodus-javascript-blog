@@ -15,7 +15,6 @@ export default Ember.Route.extend({
       newComment.save().then(function() {
         return post.save();
       });
-      this.transitionTo('post', post);
     },
     deleteComment(comment) {
       comment.destroyRecord();

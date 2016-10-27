@@ -1,4 +1,16 @@
-{{comment.userName}}<br>
-{{comment.content}}<br>
-{{comment.dateCreated}}
-<button {{action 'deleteComment' comment}}>Delete Comment</button><hr>
+<!-- <strong>{{comment.userName}}</strong>: {{comment.content}} //
+{{comment.dateCreated}} -->
+<div class="comment">  
+  <a class="avatar">
+    <div class="ui red mini left floated" {{action 'deleteComment' comment}}>{{fa-icon "trash"}}</div>{{fa-icon "user"}}
+  </a>
+  <div class="content">
+    <a class="author">{{comment.userName}}</a>
+    <div class="metadata">
+      <span class="date">{{comment.dateCreated}}</span>
+    </div>
+    <div class="text">
+      {{comment.content}}
+    </div>
+  </div>
+</div>

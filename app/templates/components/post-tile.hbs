@@ -3,10 +3,27 @@
   {{post.content}}<br>
   {{post.dateCreated}}
   {{post-edit post=post editPost="editPost" deletePost="deletePost"}}
-  {{#each post.comments as |comment|}}
-    {{comment-tile comment=comment deleteComment="deleteComment"}}
-  {{/each}}
+  <div class="ui comments">
+    <h3 class="ui dividing header">Comments</h3>
+    {{#each post.comments as |comment|}}
+      {{comment-tile comment=comment deleteComment="deleteComment"}}
+    {{/each}}
+  </div>
   {{comment-new post=post newComment="newComment"}}
 {{else}}
-  {{#link-to 'post' post.id}}{{post.title}}{{/link-to}}
+  <div class='image'>
+        {{#link-to 'post' post.id}}
+        <img src={{post.imageURL}} class='ui fluid image card-image' style="height: 350px;object-fit: cover;">
+        {{/link-to}}
+  </div>
+  <br>
+  <div class='extra content'>
+    <span style='font-size:2em; font-weight:bold;'>
+      {{post.title}}
+    </span>
+    <span class='right floated' style='padding-right: 5px;'>
+      {{fa-icon "comment-o"}} {{post.comments.length}}
+    </span>
+  </div>
+  <br>
 {{/if}}

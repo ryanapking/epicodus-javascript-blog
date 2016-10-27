@@ -2,13 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   inPost: false,
+  flipCounter:0,
   didRender(){
     if(this.get("routeName") === "post"){
       this.set("inPost", true)
     } else{
       this.set("inPost", false);
     }
-    console.log(this.inPost);
+    var rando = Math.random() * 2000;
+    console.log(rando);
+    var currentThing = this;
+    setTimeout(function() {
+      $("." + currentThing.post.id).transition('fly left', '2500ms')
+    }, rando);
   },
   actions:{
     deletePost(post){
@@ -23,8 +29,5 @@ export default Ember.Component.extend({
     deleteComment(comment) {
       this.sendAction('deleteComment', comment);
     },
-    testFunc(routeName){
-      console.log(routeName);
-    }
   }
 });

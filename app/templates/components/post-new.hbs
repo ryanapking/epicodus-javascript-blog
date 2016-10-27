@@ -1,11 +1,27 @@
 {{#if inNew}}
-  <label>Title:</label>
-  {{input value=title}}
-  <label>Content:</label>
-  {{input value=content}}
-  <label>Date Created:</label>
-  {{input type="date" value=dateCreated}}
-  <button {{action 'newPost'}}>Submit Post</button>
+  <div class="ui form segment right floated" style="width: 50vw">
+    <div class='three fields'>
+      <div class='field'>
+        <label>Title:</label>
+        {{input value=title}}
+      </div>
+      <div class='field'>
+        <label>Image:</label>
+        {{input value=imageURL}}
+      </div>
+      <div class='field'>
+        <label>Date Created:</label>
+        {{input type="date" value=dateCreated}}
+      </div>
+    </div>
+    <!-- <div class='three fields'>       -->
+      <div class='field'>
+        <label>Content:</label>
+        {{textarea value=content}}
+      </div>
+    <!-- </div> -->
+    <div class="circular ui button green mini right floated" {{action 'newPost'}}>{{fa-icon "check"}}</div>
+  </div>
 {{else}}
-  <button {{action "goNew"}}>Create New Post</button>
-{{/if}}
+  <div class="circular right floated ui button blue mini" {{action 'goNew'}}>{{fa-icon "plus"}}</div>
+  {{/if}}

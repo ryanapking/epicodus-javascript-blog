@@ -1,5 +1,14 @@
-
-{{#each model as |post|}}
-  {{post-tile post=post deletePost="deletePost" editPost="editPost"}}
-{{/each}}
+<br><br>
+<div class="ui three cards" style="text-align:center">
+  {{#each model as |post|}}
+    <div class='ui card container tag transition hidden {{post.id}}'>
+      {{post-tile post=post deletePost="deletePost" editPost="editPost"}}
+    </div>
+  {{/each}}
+</div>
+<br>
 {{post-new newPost="newPost"}}
+
+<div class="ui button" {{action 'openModal'}}>
+  Open Profile
+</div>
